@@ -26,6 +26,13 @@
         }
 
         [Test]
+        public void Constructor_ThrowsException_WhenContactRepositoryIsNull()
+        {
+            // Arrange & Act & Assert
+            Assert.Throws<ArgumentNullException>(() => new ContactService(null));
+        }
+
+        [Test]
         public void AddContact_AddsContact_WhenValidContact()
         {
             // Arrange
